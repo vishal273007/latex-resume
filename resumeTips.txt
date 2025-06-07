@@ -2,7 +2,7 @@ Resume Tips
 ===========
 
 Resume section weightage
-Project (40%) > Experience (30%) > Skills (20%) >>> remaining (10%)
+Project (40%) > Experience (30% if applicable) > Skills (20%) >>> remaining (10%)
 
 
 Content is KING: Fix keywords/impact first (or ATS/recruiters may ignore you). Appearance is secondary: Tiny spacing issues won’t matter if your content is strong.

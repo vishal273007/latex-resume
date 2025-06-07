@@ -1,0 +1,274 @@
+\documentclass[10pt, letterpaper]{article}
+
+% Packages:
+\usepackage[
+    ignoreheadfoot, % set margins without considering header and footer
+    top=2 cm, % seperation between body and page edge from the top
+    bottom=2 cm, % seperation between body and page edge from the bottom
+    left=2 cm, % seperation between body and page edge from the left
+    right=2 cm, % seperation between body and page edge from the right
+    footskip=1.0 cm, % seperation between body and footer
+    % showframe % for debugging 
+]{geometry} % for adjusting page geometry
+\usepackage{titlesec} % for customizing section titles
+\usepackage{tabularx} % for making tables with fixed-width columns
+\usepackage{array} % tabularx requires this
+\usepackage[dvipsnames]{xcolor} % for coloring text
+\definecolor{primaryColor}{RGB}{0, 59, 92} % define primary color - subtle professional blue
+\usepackage{enumitem} % for customizing lists
+\usepackage{fontawesome5} % for using icons
+\usepackage{amsmath} % for math
+\usepackage[
+    pdftitle={Vishal Vishwakarma's Resume},
+    pdfauthor={Vishal Vishwakarma},
+    pdfcreator={LaTeX},
+    colorlinks=true,
+    urlcolor=primaryColor
+]{hyperref} % for links, metadata and bookmarks
+\usepackage[pscoord]{eso-pic} % for floating text on the page
+\usepackage{calc} % for calculating lengths
+\usepackage{changepage} % for one column entries (adjustwidth environment)
+\usepackage{paracol} % for two and three column entries
+\usepackage{needspace} % for avoiding page brake right after the section title
+\usepackage{iftex} % check if engine is pdflatex, xetex or luatex
+
+% Ensure that generate pdf is machine readable/ATS parsable:
+\ifPDFTeX
+    \input{glyphtounicode}
+    \pdfgentounicode=1
+    \usepackage[T1]{fontenc}
+    \usepackage[utf8]{inputenc}
+    \usepackage{lmodern}
+\fi
+
+\usepackage{charter}
+
+% Custom commands:
+\newcommand{\githublink}[1]{\href{https://github.com/vishal273007/#1}{\textcolor{primaryColor}{\faGithub\ github.com/vishal273007/#1}}}
+
+% Some settings:
+\raggedright
+\AtBeginEnvironment{adjustwidth}{\partopsep0pt} % remove space before adjustwidth environment
+\pagestyle{empty} % no header or footer
+\setcounter{secnumdepth}{0} % no section numbering
+\setlength{\parindent}{0pt} % no indentation
+\setlength{\topskip}{0pt} % no top skip
+\setlength{\columnsep}{0.15cm} % set column seperation
+\pagenumbering{gobble} % no page numbering
+
+\titleformat{\section}{\needspace{4\baselineskip}\color{primaryColor}\bfseries\large}{}{0pt}{}[\vspace{1pt}\titlerule]
+
+\titlespacing{\section}{
+    % left space:
+    -1pt
+}{
+    % top space:
+    0.3 cm
+}{
+    % bottom space:
+    0.2 cm
+} % section title spacing
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\small$\bullet$}}$} % custom bullet points
+\newenvironment{highlights}{
+    \begin{itemize}[
+        topsep=0.10 cm,
+        parsep=0.10 cm,
+        partopsep=0pt,
+        itemsep=0pt,
+        leftmargin=10pt
+    ]
+}{
+    \end{itemize}
+} % new environment for highlights
+
+
+\newenvironment{highlightsforbulletentries}{
+    \begin{itemize}[
+        topsep=0.10 cm,
+        parsep=0.10 cm,
+        partopsep=0pt,
+        itemsep=0pt,
+        leftmargin=10pt
+    ]
+}{
+    \end{itemize}
+} % new environment for highlights for bullet entries
+
+\newenvironment{onecolentry}{
+    \begin{adjustwidth}{
+        0 cm + 0.00001 cm
+    }{
+        0 cm + 0.00001 cm
+    }
+}{
+    \end{adjustwidth}
+} % new environment for one column entries
+
+\newenvironment{twocolentry}[2][]{
+    \onecolentry
+    \def\secondColumn{#2}
+    \setcolumnwidth{\fill, 4.5 cm}
+    \begin{paracol}{2}
+}{
+    \switchcolumn \raggedleft \secondColumn
+    \end{paracol}
+    \endonecolentry
+} % new environment for two column entries
+
+\newenvironment{header}{
+    \setlength{\topsep}{0pt}\par\kern\topsep\centering\linespread{1.15}
+}{
+    \par\kern\topsep
+} % new environment for the header
+
+
+
+
+\begin{document}
+    \newcommand{\AND}{\unskip
+        \cleaders\copy\ANDbox\hskip\wd\ANDbox
+        \ignorespaces
+    }
+    \newsavebox\ANDbox
+    \sbox\ANDbox{$|$}
+    
+
+    \begin{header}
+        \fontsize{25 pt}{25 pt}\selectfont Vishal Vishwakarma
+    
+        \vspace{5 pt}
+    
+        \normalsize
+        % First line: Email | Phone
+        \mbox{\href{mailto:vv273007@gmail.com}{\textcolor{primaryColor}{\faEnvelope}\ vv273007@gmail.com}}%
+        \kern 5.0 pt%
+        \AND%
+        \kern 5.0 pt%
+        \mbox{\href{tel:+91-8840956096}{\textcolor{primaryColor}{\faPhone*}\ +91 88409 56096}}%
+        
+        \vspace{2 pt}
+        
+        % Second line: GitHub | LinkedIn | Location
+        \mbox{\href{https://github.com/vishal273007}{\textcolor{primaryColor}{\faGithub}\ github.com/vishal273007}}%
+        \kern 5.0 pt%
+        \AND%
+        \kern 5.0 pt%
+        \mbox{\href{https://linkedin.com/in/vishal273007}{\textcolor{primaryColor}{\faLinkedin}\ linkedin.com/in/vishal273007}}%
+        \kern 5.0 pt%
+        \AND%
+        \kern 5.0 pt%
+        \mbox{\textcolor{primaryColor}{\faMapMarker*}\ Hyderabad, Telangana}%
+    \end{header}
+
+    \vspace{8 pt}
+    
+    \section{PROFESSIONAL SUMMARY}
+    \begin{onecolentry}
+        Recent Computer Science graduate with Java Full Stack training from Naresh i Technologies, Hyderabad. Skilled in Java, Oracle, and front-end development, with hands-on experience through guided projects. Eager to begin my career as a Java Developer and grow through real-world development and continuous learning.
+    \end{onecolentry}
+    
+    \vspace{8 pt}
+    
+    \section{EDUCATION}
+
+\begin{twocolentry}{
+    Aug 2021 – Jun 2024 \\
+    CGPA: 6.61/10  % Same font size as date
+}
+    \textbf{B.Tech in Computer Science and Engineering} \\
+    \textit{Madan Mohan Malaviya University of Technology, Gorakhpur}
+\end{twocolentry}
+
+\vspace{0.2cm}
+
+\begin{twocolentry}{
+    Aug 2017 – Jun 2020 \\
+    Percentage: 74.8\%  % Same font size as date
+}
+    \textbf{Diploma in Computer Science and Engineering} \\
+    \textit{Mahamaya IT Polytechnic, Maharajganj}
+\end{twocolentry}
+    
+    \section{SKILLS}
+        \vspace{0.2 cm}
+
+        \begin{onecolentry}
+            \begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
+                \item \textbf{Languages:} Core Java (OOP, collections, exception handling)
+                \item \textbf{Front-End:} HTML, CSS, JavaScript
+                \item \textbf{Back-End:} JDBC, Servlet, Spring Boot
+                \item \textbf{Database:} Oracle 19c
+                \item \textbf{Tools \& Platforms:} Git, GitHub, VS Code, Eclipse, Linux CLI, NeoVim
+            \end{itemize}
+        \end{onecolentry}
+    
+    \section{ADDITIONAL SKILLS}
+        \vspace{0.2 cm}
+        
+        \begin{onecolentry}
+            \begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
+                \item \textbf{Research:} Independently learning and debugging via tech forums, docs, and AI tools
+                \item \textbf{Troubleshooting:} Resolving software, system setup, and config issues on Windows/Linux
+                \item \textbf{Technical Documentation:} Proficient in reading and writing clear technical documentation
+            \end{itemize}
+        \end{onecolentry}
+    
+    \section{PROJECTS}
+        \vspace{0.2 cm}
+        
+        \begin{twocolentry}{
+            Apr 2025 – May 2025
+        }
+            \textbf{Personal Portfolio Website} \hfill\githublink{portfolio}\end{twocolentry}
+
+        \vspace{0.10 cm}
+        \begin{onecolentry}
+            \begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
+                \item Designed and developed a responsive personal portfolio website to showcase projects and skills
+                \item Implemented smooth scrolling navigation, project gallery, and contact form with form validation
+                \item Optimized for performance and mobile responsiveness with CSS Grid and Flexbox
+                \item \textbf{Tech Stack:} HTML, CSS, JavaScript, GitHub Pages
+            \end{itemize}
+        \end{onecolentry}
+
+
+        \vspace{0.2 cm}
+
+        \begin{twocolentry}{
+            Mar 2025 – Apr 2025
+        }
+            \textbf{Online Electronics Store} \hfill\githublink{estore}\end{twocolentry}
+        
+        \vspace{0.10 cm}
+        \begin{onecolentry}
+            \begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
+                \item Developed full-stack e-commerce platform with admin and customer portals
+                \item Implemented secure authentication and product management using Java Servlets
+                \item Integrated Oracle database with JDBC for efficient data handling and transactions
+                \item \textbf{Tech Stack:} Java, Servlets, JSP, JDBC, Oracle SQL, HTML/CSS, JavaScript
+            \end{itemize}
+        \end{onecolentry}
+    
+    \section{ACHIEVEMENTS}
+        \vspace{0.2 cm}
+        
+        \begin{onecolentry}
+            \begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
+                \item Secured \textbf{76th Rank} in UPCET and \textbf{29th Rank} in MMMUT Entrance Exam (2021)
+                \item \textbf{Ranked \#1 in class} in 10th and 12th UP Board Examinations among 150+ and 200+ students respectively.
+            \end{itemize}
+        \end{onecolentry}
+
+    \section{INTERESTS}
+        \vspace{0.2 cm}
+        
+        \begin{onecolentry}
+            \begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
+                \item Reading tech articles and non-fiction eBooks to explore new technologies and insights.
+                \item Exploring emerging AI tools and listening to podcasts on technology, psychology, and self-improvement
+                \item Actively contributing to open-source projects through bug reporting and providing user feedback
+            \end{itemize}
+        \end{onecolentry}
+
+\end{document}

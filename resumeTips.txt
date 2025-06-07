@@ -1,0 +1,156 @@
+Resume Tips
+===========
+
+Resume section weightage
+Project (40%) > Experience (30%) > Skills (20%) >>> remaining (10%)
+
+
+Content is KING: Fix keywords/impact first (or ATS/recruiters may ignore you). Appearance is secondary: Tiny spacing issues won’t matter if your content is strong.
+
+
+Get used to updating your resume according to job post description.
+let me tell you a secret:
+- I never used the same resume twice.
+- I edited it for every job description.
+Hiring managers don’t want a “Best Resume”, They want the right one.
+
+Average Interview is of 45 mins (35 Min -- 60 Min) long. Interviewer cannot touch every topic. So prepare focusing only on most commonly asked interview questions.
+
+
+Forgetting is a natural human tendency, which is why we need to regularly revise.
+
+
+
+
+
+In a usual seen job post competition where success rate is 1 in 1100, update project for each job post like this - 
+
+1. Project description update to same project
+2. Skill keyword priority update according to jop description exactly 
+3. Professional summary update with exact job post description
+
+Just copy paste the keywords in these sections but not blindly using an AI assistant.
+
+
+
+
+
+
+
+With weak DSA, forget about Product Based Companies.
+
+
+
+
+=================================================================
+
+List only easy projects that you can explain well in the Projects
+
+Projects section
+================
+
+Problem → Solution → Impact in every bullet / did X with Y for Z
+
+Description must have (one line with bullet point)  
+ - What did you do/Problem? 
+	Designed a GUI-based system to manage student records.
+ - How did you do it/Action?
+	Implemented CRUD operations for adding, updating, and deleting student data.
+	Integrated MySQL for secure database storage.
+ - What was the impact/Result? (by how many % amount impact)
+	Reduced manual record-keeping time by 30% for college staff.
+
+use max 3 bullet points to mention if needed.
+
+Use clear, descriptive title  (e.g., "E-Commerce Website")
+
+After the project description, place "Tech Stack (layered : frontend, backend, dB) >> Technologies Used(simpler-only one programming lang used)".
+
+Logical Flow: Project title → description/impact → technologies.
+
+
+
+-----------------------------------------------------------------
+
+
+Apply for job around in between 9 am and before 10 am.
+
+Make an excel sheet to manage job application progress, like application date, follow-up date, etc.
+
+
+Resume Tips Archived
+====================
+
+Font size - use 10 (overall b/w 10 - 12 pt)
+
+fonts = 1. Calibri (looks good)
+
+Must add proper keywords from job description to pass ATS.
+
+
+
+ensure the resume has - 1. action word, 2. quantifiable impact, 3. Relevance.
+
+
+
+
+
+
+Review final resume with at least 3 knowledgeable people to find out if any issue exist.
+
+
+Case
+====
+Sections → ALL UPPERCASE
+Content → Sentence case (Built a responsive portfolio website using JavaScript.)
+
+
+Use contact info with embedded link and show only platform name. Like GitHub | LinkedIn with link embedded. Avoid username and full URL.
+
+
+Contact sorting order -> Email, Phone, LinkedIn, GitHub, Location
+
+Use current residence Hyderabad where you are now, Gorakhpur is only required in Full permanent address.
+
+Short college name is perfectly fine.
+
+
+Contact Heading for 2 lines
+Line 1: Email | Phone
+Line 2: GitHub | LinkedIn | Location
+
+Here location is not mandatory, can be removed to avoid bias it is only useful if you are applying locally.
+
+
+
+
+Use en-dash(big hyphen) (–) between dates for ranges, e.g., Mar 2020 – Dec 2022
+
+You can use a small logo in the header section for mobile no, linked, etc.
+
+
+Profession summary - 2 to 3 lines max including skills, training, experience, objective
+
+GitHub link - right aligned is best. GitHub link name labels - GitHub Repository > GitHub Link
+
+Job location should be all over India to first get interview calls from LinkedIn and Naukri. First most important things is to getting the experience of Test and Interview.
+
+
+
+
+Adding generic soft skills like "Problem-solving • Communication will actually make your resume look cheaper than your thinking that it will help.              Why? shows inexperience, seems filler, takes away focus.        technical skills + projects = interviews.
+
+Focus Your Energy Instead On:
+Building that project - this will triple your resume's impact
+Polishing your GitHub profile
+Writing a good project description
+
+The magic happens in the Projects section - that's where you'll stand out from other candidates.
+
+============================================================
+
+ATS scoring sites mislead with generic, profit-driven feedback. 
+
+A 2022 LinkedIn survey found that 85% of jobs are filled through networking.
+
+

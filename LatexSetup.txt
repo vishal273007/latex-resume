@@ -1,0 +1,27 @@
+Set Up LaTeX Editing in VS Code
+
+Dependencies
+============
+
+1. MiKTeX
+
+2. Strawberry Perl
+
+3. LaTeX Workshop Extension
+
+
+
+Verify Setup (in Windows Terminal):
+
+pdflatex --version
+perl -v
+
+
+
+To Preview Output - 
+=================
+1. Ctrl + Alt + B to build the resume code, 
+2. Ctrl + Alt + V to preview. 
+
+
+Press Ctrl with your right thumb and Alt + V with your left thumb and left index finger.

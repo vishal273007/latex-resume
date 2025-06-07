@@ -1,0 +1,234 @@
+\documentclass[10pt, letterpaper]{article}
+
+% Packages:
+\usepackage[
+    ignoreheadfoot,
+    top=1.5 cm,
+    bottom=1.5 cm,
+    left=1.8 cm,
+    right=1.8 cm,
+    footskip=0.8 cm,
+]{geometry}
+\usepackage{titlesec}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage[dvipsnames]{xcolor}
+\definecolor{primaryColor}{RGB}{0, 51, 102} % more subtle professional dark blue
+\usepackage{enumitem}
+\usepackage{fontawesome5}
+\usepackage{amsmath}
+\usepackage[
+    pdftitle={Vishal Vishwakarma's Resume},
+    pdfauthor={Vishal Vishwakarma},
+    pdfcreator={LaTeX},
+    colorlinks=true,
+    urlcolor=primaryColor
+]{hyperref}
+\usepackage[pscoord]{eso-pic}
+\usepackage{calc}
+\usepackage{changepage}
+\usepackage{paracol}
+\usepackage{ifthen}
+\usepackage{needspace}
+\usepackage{iftex}
+
+% Ensure that generate pdf is machine readable/ATS parsable:
+\ifPDFTeX
+    \input{glyphtounicode}
+    \pdfgentounicode=1
+    \usepackage[utf8]{inputenc}
+    \usepackage{lmodern}
+\fi
+
+% Some settings:
+\AtBeginEnvironment{adjustwidth}{\partopsep0pt}
+\pagestyle{empty}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\topskip}{0pt}
+\setlength{\columnsep}{0cm}
+
+\titleformat{\section}{\needspace{3.5\baselineskip}\color{primaryColor}\bfseries\large}{}{0pt}{}[\vspace{1pt}\titlerule]
+
+\titlespacing{\section}{
+    -1pt
+}{
+    0.2 cm
+}{
+    0.2 cm
+}
+
+\renewcommand\labelitemi{$\bullet$}
+\newenvironment{highlights}{
+    \begin{itemize}[
+        topsep=0.06 cm,
+        parsep=0.06 cm,
+        partopsep=0pt,
+        itemsep=0pt,
+        leftmargin=0.4 cm + 10pt
+    ]
+}{
+    \end{itemize}
+}
+
+\newenvironment{highlightsforbulletentries}{
+    \begin{itemize}[
+        topsep=0.06 cm,
+        parsep=0.06 cm,
+        partopsep=0pt,
+        itemsep=0pt,
+        leftmargin=10pt
+    ]
+}{
+    \end{itemize}
+}
+
+\newenvironment{onecolentry}{
+    \begin{adjustwidth}{
+        0.2 cm + 0.00001 cm
+    }{
+        0.2 cm + 0.00001 cm
+    }
+}{
+    \end{adjustwidth}
+}
+
+\newenvironment{twocolentry}[2][]{
+    \onecolentry
+    \def\secondColumn{#2}
+    \setcolumnwidth{\fill, 4.5 cm}
+    \begin{paracol}{2}
+}{
+    \switchcolumn \raggedleft \secondColumn
+    \end{paracol}
+    \endonecolentry
+}
+
+\newenvironment{header}{
+    \setlength{\topsep}{0pt}\par\kern\topsep\centering\linespread{1.5}
+}{
+    \par\kern\topsep
+}
+
+% save the original href command in a new command:
+\let\hrefWithoutArrow\href
+
+% new command for external links:
+\renewcommand{\href}[2]{\hrefWithoutArrow{#1}{\ifthenelse{\equal{#2}{}}{}{#2 }\raisebox{.15ex}{\footnotesize \faExternalLink*}}}
+
+% Define a special command for GitHub links with consistent styling
+\newcommand{\githublink}[1]{\hrefWithoutArrow{https://github.com/vishal273007/#1}{\textcolor{primaryColor}{\faGithub\ \small GitHub Repository}}}
+
+\begin{document}
+    \newcommand{\AND}{\unskip
+        \cleaders\copy\ANDbox\hskip\wd\ANDbox
+        \ignorespaces
+    }
+    \newsavebox\ANDbox
+    \sbox\ANDbox{}
+
+    \begin{header}
+        \textbf{\fontsize{24pt}{24pt}\selectfont\color{primaryColor} Vishal Vishwakarma}
+        
+        \vspace{0.2cm}
+        
+        \normalsize
+        \mbox{\hrefWithoutArrow{mailto:vv273007@gmail.com}{\color{primaryColor}{\footnotesize\faEnvelope[regular]}\hspace*{0.13cm}vv273007@gmail.com}}%
+        \hspace{0.35cm}%
+        \mbox{\hrefWithoutArrow{tel:+91-8840956096}{\color{primaryColor}{\footnotesize\faPhone*}\hspace*{0.13cm}+91 88409 56096}}%
+        \hspace{0.35cm}%
+        \mbox{\hrefWithoutArrow{https://linkedin.com/in/vishal273007}{\color{primaryColor}{\footnotesize\faLinkedinIn}\hspace*{0.13cm}LinkedIn}}%
+        \hspace{0.35cm}%
+        \mbox{\hrefWithoutArrow{https://github.com/vishal273007}{\color{primaryColor}{\footnotesize\faGithub}\hspace*{0.13cm}GitHub}}%
+        \hspace{0.35cm}%
+        \mbox{{\color{primaryColor}\footnotesize\faMapMarker*}\hspace*{0.13cm}Hyderabad, Telangana}%
+    \end{header}
+
+
+    \vspace{0.2 cm}
+    
+    \section{PROFESSIONAL SUMMARY}
+    \begin{onecolentry}
+        Computer Science graduate with 6+ months of hands-on Java Full Stack training, started in October 2024, at Naresh i Technologies, Hyderabad. Skilled in Java, Spring Boot, Oracle, and frontend technologies, with practical exposure to building real-world applications. Eager to leverage technical skills in full-stack development, aiming to contribute to innovative projects and deliver efficient solutions as a Junior Developer.
+    \end{onecolentry}
+    
+    \vspace{0.2 cm}
+    
+    \section{EDUCATION}
+
+    \begin{twocolentry}{\textit{Aug 2021 – Jun 2024}}
+        \textbf{B.Tech in Computer Science and Engineering}, MMMUT Gorakhpur
+    \end{twocolentry}
+    
+    \vspace{0.2 cm}
+    
+    \begin{twocolentry}{\textit{Aug 2017 – Jun 2020}}
+        \textbf{Diploma in Computer Science and Engineering}, MMIT Maharajganj
+    \end{twocolentry}
+    
+    \vspace{0.2 cm}
+    
+    \section{TECHNICAL SKILLS}
+
+    \begin{onecolentry}
+        \begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
+            \item \textbf{Languages:} Java, JavaScript
+            \item \textbf{Front-End:} HTML, CSS, JavaScript
+            \item \textbf{Back-End:} Core Java, JDBC, Servlet, Spring Boot (learning)
+            \item \textbf{Database:} Oracle 19c
+            \item \textbf{Tools \& Platforms:} Git, GitHub, Eclipse, VS Code, Cursor, Windows 11, NeoVim
+        \end{itemize}
+    \end{onecolentry}
+    
+    \vspace{0.2 cm}
+    
+    \section{ADDITIONAL SKILLS}
+    
+    \begin{onecolentry}
+        \begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
+            \item \textbf{Research:} Proficient in using Google, tech forums and AI chatbots for debugging and learning
+            \item \textbf{Troubleshooting:} Experienced in resolving system, software setup, and configuration issues
+            \item \textbf{Technical Documentation:} Strong in reading and writing technical documentation
+            \item \textbf{Linux (Ubuntu WSL):} Basic command-line usage, file management, SSH, FTP
+            \item \textbf{Typing:} Proficient in touch typing
+        \end{itemize}
+    \end{onecolentry}
+    
+    \vspace{0.2 cm}
+    
+    \section{PROJECTS}
+    \begin{onecolentry}
+        \textbf{\large To-Do List Console App} \hfill \textit{Feb 2025 - Mar 2025} \\
+        \textit{Java, ArrayList, IntelliJ IDEA} \hfill \githublink{todo-console-app} \\
+        \vspace{0.03cm}
+        \begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
+            \item Developed a console-based task manager with a menu-driven interface
+            \item Enabled users to add, view, delete, and mark tasks as completed
+            \item Applied object-oriented concepts and dynamic data structures
+        \end{itemize}
+    \end{onecolentry}
+    
+    \vspace{0.2 cm}
+    
+    \begin{onecolentry}
+        \textbf{\large Student Management System} \hfill \textit{Apr 2025 - Ongoing} \\
+        \textit{Java, Spring Boot, Thymeleaf, MySQL, Postman} \hfill \githublink{student-mgmt-system} \\
+        \vspace{0.03cm}
+        \begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
+            \item Building a full-stack web application to manage student profiles and academic records
+            \item Implements CRUD operations with data persistence and server-side validation
+            \item Integrated responsive UI with Thymeleaf and Spring MVC
+        \end{itemize}
+    \end{onecolentry}
+    
+    \vspace{0.2 cm}
+    
+    \section{ACHIEVEMENTS}
+    \begin{onecolentry}
+        \begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
+            \item Secured \textbf{76th Rank} in UPCET and \textbf{29th Rank} in MMMUT Engineering Admission
+            \item \textbf{Ranked \#1 in class} in 10th and 12th UP Board Examinations among 150+ and 200+ students respectively.
+        \end{itemize}
+    \end{onecolentry}
+
+\end{document}
